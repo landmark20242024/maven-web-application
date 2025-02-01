@@ -17,20 +17,19 @@
 		<url>http://landmarktechnologies.com/</url>
 	</organization>
 
-        <properties>
-                <jdk.version>1.8</jdk.version>
-                <spring.version>5.1.2.RELEASE</spring.version>
-                <junit.version>4.11</junit.version>
-                <log4j.version>1.2.17</log4j.version>
-                <sonar.host.url>http://34.228.113.140:9000/</sonar.host.url>
-                <sonar.login>admin</sonar.login>
-                <sonar.password>admin</sonar.password>
-                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        </properties>
+	<properties>
+		<jdk.version>1.8</jdk.version>
+		<spring.version>5.1.2.RELEASE</spring.version>
+		<junit.version>4.11</junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<sonar.host.url>http://34.228.113.140:9000/</sonar.host.url>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>admin</sonar.password>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
 
 	<dependencies>
-		
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
@@ -60,7 +59,6 @@
 		</dependency>
 
 		<!-- compile dependencies -->
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -81,9 +79,8 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
-		<!-- provided dependencies -->
 
+		<!-- provided dependencies -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -92,20 +89,19 @@
 		</dependency>	
 	</dependencies>	
 
-  <distributionManagement>
-      <repository>
-        <id>nexus</id>
-        <name>Landmark Technologies Releases Nexus Repository</name>
-        <url>http://3.88.161.163:8089/Landmark/repository/tesla-release/</url>
-      </repository>
-      
-      <snapshotRepository>
-        <id>nexus</id>
-        <name>Landmark Technologies Snapshot Nexus Repository </name>
-        <url>http://3.88.161.163:8089/Landmark/repository/snapshot-releases/</url>
-      </snapshotRepository>
-      
-  </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Landmark Technologies Releases Nexus Repository</name>
+			<url>http://3.88.161.163:8089/Landmark/repository/tesla-release/</url>
+		</repository>
+		
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Landmark Technologies Snapshot Nexus Repository </name>
+			<url>http://3.88.161.163:8089/Landmark/repository/snapshot-releases/</url>
+		</snapshotRepository>
+	</distributionManagement>
 	
 	<build>
 		<finalName>tesla</finalName>
@@ -144,14 +140,14 @@
 					<wtpContextName>maven-web-application</wtpContextName>
 				</configuration>
 			</plugin>
-		<!-- 
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>3.3.1</version> 
-        </plugin>
-</plugins>
+
+			<!-- Uncomment the following block to enable maven-war-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.1</version> 
+			</plugin>
+		</plugins>
 	</build>
-	
-	
+
 </project>
